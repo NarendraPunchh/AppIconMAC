@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6751"/>
+        <plugIn identifier="com.apple.WebKitIBPlugin" version="6751"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="QRCodeScreen">
+            <connections>
+                <outlet property="lblValue" destination="U6t-Ux-fJK" id="tPy-uU-GIM"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+                <outlet property="web" destination="wRk-P1-5WF" id="JMX-vg-w5E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="U6t-Ux-fJK">
+                    <rect key="frame" x="11" y="249" width="233" height="24"/>
+                    <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" drawsBackground="YES" id="NqZ-eF-EQD">
+                        <font key="font" metaFont="system" size="16"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <webView translatesAutoresizingMaskIntoConstraints="NO" id="wRk-P1-5WF">
+                    <rect key="frame" x="11" y="11" width="278" height="230"/>
+                    <webPreferences key="preferences" defaultFontSize="12" defaultFixedFontSize="12"/>
+                </webView>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VqA-vd-CWj">
+                    <rect key="frame" x="247" y="252" width="42" height="17"/>
+                    <buttonCell key="cell" type="inline" title="Done" bezelStyle="inline" alignment="center" controlSize="mini" borderStyle="border" inset="2" id="iyQ-af-Ih4">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystemBold"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="btnRefreshTapped:" target="-2" id="bUL-sl-RCS"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="VqA-vd-CWj" secondAttribute="trailing" constant="11" id="0vJ-oi-K1V"/>
+                <constraint firstItem="U6t-Ux-fJK" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="11" id="7kX-bW-s6V"/>
+                <constraint firstAttribute="bottom" secondItem="wRk-P1-5WF" secondAttribute="bottom" constant="11" id="O8Q-KS-aya"/>
+                <constraint firstAttribute="trailing" secondItem="wRk-P1-5WF" secondAttribute="trailing" constant="11" id="PBi-31-RIC"/>
+                <constraint firstItem="VqA-vd-CWj" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="31" id="Pez-9P-brJ"/>
+                <constraint firstItem="U6t-Ux-fJK" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="27" id="TTE-he-wTZ"/>
+                <constraint firstItem="wRk-P1-5WF" firstAttribute="top" secondItem="U6t-Ux-fJK" secondAttribute="bottom" constant="8" id="WBs-Wy-L3o"/>
+                <constraint firstItem="wRk-P1-5WF" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="11" id="YN7-fV-cle"/>
+                <constraint firstAttribute="trailing" secondItem="U6t-Ux-fJK" secondAttribute="trailing" constant="56" id="bA8-72-aI8"/>
+            </constraints>
+            <point key="canvasLocation" x="126" y="280"/>
+        </customView>
+    </objects>
+</document>
