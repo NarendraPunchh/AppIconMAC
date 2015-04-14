@@ -50,13 +50,7 @@
 }
 
 - (BOOL)performDragOperation:(id < NSDraggingInfo >)sender {
-    [self creatAppIcons];
     return YES;
-//    if ([[[draggedFilenames objectAtIndex:0] pathExtension] isEqual:@"txt"]){
-//        return YES;
-//    } else {
-//        return NO;
-//    }
 }
 
 - (void)concludeDragOperation:(id <NSDraggingInfo>)sender{
@@ -75,19 +69,43 @@
     for (NSString * path in [fileManager subpathsOfDirectoryAtPath:[self getNewPath:arr] error:nil]) {
         if ([path rangeOfString:@"AppIcon.appiconset" options:NSCaseInsensitiveSearch].length) {
             if (![path rangeOfString:@".json"].length) {
-                [self createAppIconsWithArray:arr
-                                      andpath:path];
+                pathImageAsset = path;
             } else if ([path rangeOfString:@".json"].length) {
-                NSString * filePath = [NSString stringWithFormat:@"%@%@",arr.lastObject,path];
-                NSData *data = [NSData dataWithContentsOfFile:filePath];
-                NSString *textDataFile = [[NSString alloc] initWithData:data
-                                                               encoding:NSUTF8StringEncoding];
-                NSLog(@"Data : %@",textDataFile);
+                NSString * filePath = [NSString stringWithFormat:@"%@/%@",arr.lastObject,path];
+                [self creatAppIconsWithTextData:[NSData dataWithContentsOfFile:filePath]];
+//                NSString *textDataFile = [[NSString alloc] initWithData:[NSData dataWithContentsOfFile:filePath]
+//                                                               encoding:NSUTF8StringEncoding];
             }
         }
     }
     [self createAppIconsWithArray:arr
                           andpath:pathImageAsset];
+}
+
+- (void) creatAppIconsWithTextData:(NSData *)data {
+    NSError *e = nil;
+    NSDictionary *jsonArray = [NSJSONSerialization JSONObjectWithData:data
+                                                         options:NSJSONReadingMutableContainers
+                                                           error:&e];
+
+    if (!jsonArray) {
+        NSLog(@"Error parsing JSON: %@", e);
+    } else {
+        if ([jsonArray valueForKey:@"images"]) {
+            NSArray * arrayData = jsonArray[@"images"];
+            for (NSDictionary * dict in arrayData) {
+                
+            }
+        }
+    }
+//    NSMutableArray * array = [NSMutableArray array];
+//    NSArray *sizeArray = @[@29,@58,@87,@100,@200];
+//    for (NSNumber * number in sizeArray) {
+//        IconClass * icon = [IconClass new];
+//        icon.size = number.intValue;
+//        [array addObject:icon];
+//    }
+//    icons = [NSArray arrayWithArray:array];
 }
 
 - (void) createAppIconsWithArray:(NSArray *)arr andpath:(NSString *)path {
@@ -133,17 +151,6 @@
     
     
     return imgRef;
-}
-
-- (void) creatAppIcons {
-    NSMutableArray * array = [NSMutableArray array];
-    NSArray *sizeArray = @[@29,@58,@87,@100,@200];
-    for (NSNumber * number in sizeArray) {
-        IconClass * icon = [IconClass new];
-        icon.size = number.intValue;
-        [array addObject:icon];
-    }
-    icons = [NSArray arrayWithArray:array];
 }
 
 - (void)drawRect:(NSRect)rect{
