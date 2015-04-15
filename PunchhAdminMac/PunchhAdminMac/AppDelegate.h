@@ -10,6 +10,6 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
-
+@property (strong, nonatomic) NSImage * image;
 @end
 

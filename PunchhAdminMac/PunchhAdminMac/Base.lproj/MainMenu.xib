@@ -20,22 +20,39 @@
         <window title="PunchhAdminMac" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="331" height="360"/>
+            <rect key="contentRect" x="335" y="390" width="638" height="360"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="331" height="360"/>
+                <rect key="frame" x="0.0" y="0.0" width="638" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m5a-NT-h6F" customClass="DragDropView">
-                        <rect key="frame" x="17" y="17" width="297" height="326"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" image="7368" id="nku-T7-Tc1"/>
+                        <rect key="frame" x="324" y="17" width="297" height="326"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" id="nku-T7-Tc1"/>
                     </imageView>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WgG-8f-nWq" customClass="DragDropView">
+                        <rect key="frame" x="15" y="17" width="297" height="326"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" id="jEQ-MC-iBi"/>
+                    </imageView>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Agp-BZ-QPM">
+                        <rect key="frame" x="41" y="1" width="237" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Drop Heighest resolution image here" id="gMU-v1-2o6">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" red="0.38400287649999998" green="0.38400287649999998" blue="0.38400287649999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WzN-LL-4dm">
+                        <rect key="frame" x="354" y="172" width="237" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Drop the project folder here" id="HnD-di-rwB">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" red="0.38400287645218945" green="0.38400287645218945" blue="0.38400287645218945" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="490.5" y="390"/>
+            <point key="canvasLocation" x="402" y="367"/>
         </window>
     </objects>
-    <resources>
-        <image name="7368" width="1920" height="1440"/>
-    </resources>
 </document>
