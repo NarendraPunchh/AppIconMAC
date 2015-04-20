@@ -17,7 +17,6 @@
 		0EF1A9BF1AD3ED50002D77E2 /* QRCodeScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EF1A9BD1AD3ED50002D77E2 /* QRCodeScreen.xib */; };
 		0EF1A9C11AD3F38C002D77E2 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF1A9C01AD3F38C002D77E2 /* WebKit.framework */; };
 		0EF1A9C41AD40AA8002D77E2 /* DragDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF1A9C31AD40AA8002D77E2 /* DragDropView.m */; };
-		0EF1A9C61AD40EE5002D77E2 /* 7368.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0EF1A9C51AD40EE5002D77E2 /* 7368.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +48,6 @@
 		0EF1A9C01AD3F38C002D77E2 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		0EF1A9C21AD40AA8002D77E2 /* DragDropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragDropView.h; sourceTree = "<group>"; };
 		0EF1A9C31AD40AA8002D77E2 /* DragDropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragDropView.m; sourceTree = "<group>"; };
-		0EF1A9C51AD40EE5002D77E2 /* 7368.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7368.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +100,6 @@
 				0EF1A9A41AD3ED36002D77E2 /* MainMenu.xib */,
 				0EF1A9C21AD40AA8002D77E2 /* DragDropView.h */,
 				0EF1A9C31AD40AA8002D77E2 /* DragDropView.m */,
-				0EF1A9C51AD40EE5002D77E2 /* 7368.jpg */,
 				0E85CCB11AD5431B002BFCA1 /* IconClass.h */,
 				0E85CCB21AD5431B002BFCA1 /* IconClass.m */,
 				0EF1A99B1AD3ED36002D77E2 /* Supporting Files */,
@@ -219,7 +216,6 @@
 				0EF1A9BF1AD3ED50002D77E2 /* QRCodeScreen.xib in Resources */,
 				0EF1A9A31AD3ED36002D77E2 /* Images.xcassets in Resources */,
 				0EF1A9A61AD3ED36002D77E2 /* MainMenu.xib in Resources */,
-				0EF1A9C61AD40EE5002D77E2 /* 7368.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
